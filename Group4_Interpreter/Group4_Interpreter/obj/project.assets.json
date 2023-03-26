@@ -4368,19 +4368,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Jonas Angelo Clamor\\.nuget\\packages\\": {}
+    "C:\\Users\\Victorsilog\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj",
+      "projectUniqueName": "D:\\School\\CS322\\group4-interpreter\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj",
       "projectName": "Group4_Interpreter",
-      "projectPath": "D:\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj",
-      "packagesPath": "C:\\Users\\Jonas Angelo Clamor\\.nuget\\packages\\",
-      "outputPath": "D:\\Group4_Interpreter\\Group4_Interpreter\\obj\\",
+      "projectPath": "D:\\School\\CS322\\group4-interpreter\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj",
+      "packagesPath": "C:\\Users\\Victorsilog\\.nuget\\packages\\",
+      "outputPath": "D:\\School\\CS322\\group4-interpreter\\Group4_Interpreter\\Group4_Interpreter\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Jonas Angelo Clamor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Victorsilog\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -4439,7 +4439,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
