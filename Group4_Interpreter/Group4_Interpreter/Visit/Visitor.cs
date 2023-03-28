@@ -12,7 +12,7 @@ namespace Group4_Interpreter.Visit
     public class Visitor : CodeBaseVisitor<object?>
     {
         public Dictionary<string, object?> Variables { get; } = new();
-        public override object VisitProgramStructure([NotNull] CodeParser.ProgramStructureContext context)
+        public override object? VisitProgramStructure([NotNull] CodeParser.ProgramStructureContext context)
         {
             string beginDelimiter = "BEGIN CODE";
             string endDelimiter = "END CODE";
@@ -48,12 +48,18 @@ namespace Group4_Interpreter.Visit
 
         public override object VisitVariableInitialization([NotNull] CodeParser.VariableInitializationContext context)
         {
+            string variableName = context.IDENTIFIERS()[0].GetText();
+            
+           
             return base.VisitVariableInitialization(context);
         }
 
-        public override object VisitAssignmentOperator([NotNull] CodeParser.AssignmentOperatorContext context)
+        public override object? VisitAssignmentOperator([NotNull] CodeParser.AssignmentOperatorContext context)
         {
-            return base.VisitAssignmentOperator(context);
+            var variableName = context.IDENTIFIERS().GetText();
+            var variableValue = Visit(context.expression());
+
+            return Variables[variableName] = variableValue;
         }
 
         public override object VisitBeginBlocks([NotNull] CodeParser.BeginBlocksContext context)
@@ -65,5 +71,8 @@ namespace Group4_Interpreter.Visit
         {
             return base.VisitIfCondition(context);
         }
+        
+        public override
+        
     }
 }

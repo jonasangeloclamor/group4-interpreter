@@ -241,6 +241,17 @@ public interface ICodeListener : IParseTreeListener {
 	void ExitMethodCall([NotNull] CodeParser.MethodCallContext context);
 
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="CodeParser.display"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterDisplay([NotNull] CodeParser.DisplayContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="CodeParser.display"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitDisplay([NotNull] CodeParser.DisplayContext context);
+
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="CodeParser.scanFunction"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>

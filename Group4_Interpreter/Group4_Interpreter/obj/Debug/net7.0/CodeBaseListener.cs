@@ -283,6 +283,19 @@ public partial class CodeBaseListener : ICodeListener {
 	public virtual void ExitMethodCall([NotNull] CodeParser.MethodCallContext context) { }
 
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="CodeParser.display"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterDisplay([NotNull] CodeParser.DisplayContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="CodeParser.display"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitDisplay([NotNull] CodeParser.DisplayContext context) { }
+
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="CodeParser.scanFunction"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
