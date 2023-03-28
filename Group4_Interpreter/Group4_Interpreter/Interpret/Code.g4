@@ -33,8 +33,8 @@ BOOL: 'BOOL';
 constantValues: INTEGER_VALUES | FLOAT_VALUES | CHARACTER_VALUES | BOOLEAN_VALUES | STRING_VALUES ;
 INTEGER_VALUES: [0-9]+ ;
 FLOAT_VALUES: [0-9]+ '.' [0-9]+ ;
-CHARACTER_VALUES: '\"TRUE\"' | '\"FALSE\"' ;
-BOOLEAN_VALUES: '\'' ~[\r\n\'] '\'' ; 
+CHARACTER_VALUES: '\'' ~[\r\n\'] '\'' ;
+BOOLEAN_VALUES:  '\"TRUE\"' | '\"FALSE\"' ;
 STRING_VALUES: ('"' ~'"'* '"') | ('\'' ~'\''* '\'') ;
 
 expression
@@ -64,7 +64,7 @@ methodCall: IDENTIFIERS ':' (expression (',' expression)*)? ;
 
 // Not working
 SCAN: 'SCAN:';
-scanFunction: SCAN IDENTIFIERS (',' IDENTIFIER)* ;
+scanFunction: SCAN IDENTIFIERS (',' IDENTIFIERS)* ;
 
 IDENTIFIERS: [a-zA-Z_][a-zA-Z0-9_]* ;
 COMMENTS: '#' ~[\r\n]* -> skip ;

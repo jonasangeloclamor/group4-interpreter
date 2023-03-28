@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from D:\School\CS322\group4-interpreter\Group4_Interpreter\Group4_Interpreter\Code.g4 by ANTLR 4.6.6
+// Generated from D:\School\CS322\group4-interpreter\Group4_Interpreter\Group4_Interpreter\Interpret\Code.g4 by ANTLR 4.6.6
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -19,7 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
-namespace Group4_Interpreter {
+namespace Group4_Interpreter.Interpret {
 using Antlr4.Runtime;
 using Antlr4.Runtime.Atn;
 using Antlr4.Runtime.Misc;
@@ -37,8 +37,7 @@ public partial class CodeParser : Parser {
 		END_CODE=25, BEGIN_IF=26, END_IF=27, WHILE=28, BEGIN_WHILE=29, END_WHILE=30, 
 		INT=31, FLOAT=32, CHAR=33, BOOL=34, INTEGER_VALUES=35, FLOAT_VALUES=36, 
 		CHARACTER_VALUES=37, BOOLEAN_VALUES=38, STRING_VALUES=39, LOGICAL_OPERATORS=40, 
-		SCAN=41, IDENTIFIERS=42, COMMENTS=43, BLANK_LINES=44, WHITESPACES=45, 
-		IDENTIFIER=46;
+		SCAN=41, IDENTIFIERS=42, COMMENTS=43, BLANK_LINES=44, WHITESPACES=45;
 	public const int
 		RULE_programStructure = 0, RULE_programLines = 1, RULE_programStatements = 2, 
 		RULE_variableInitialization = 3, RULE_assignmentOperator = 4, RULE_beginBlocks = 5, 
@@ -68,7 +67,7 @@ public partial class CodeParser : Parser {
 		"BEGIN_CODE", "END_CODE", "BEGIN_IF", "END_IF", "WHILE", "BEGIN_WHILE", 
 		"END_WHILE", "INT", "FLOAT", "CHAR", "BOOL", "INTEGER_VALUES", "FLOAT_VALUES", 
 		"CHARACTER_VALUES", "BOOLEAN_VALUES", "STRING_VALUES", "LOGICAL_OPERATORS", 
-		"SCAN", "IDENTIFIERS", "COMMENTS", "BLANK_LINES", "WHITESPACES", "IDENTIFIER"
+		"SCAN", "IDENTIFIERS", "COMMENTS", "BLANK_LINES", "WHITESPACES"
 	};
 	public static readonly IVocabulary DefaultVocabulary = new Vocabulary(_LiteralNames, _SymbolicNames);
 
@@ -1397,10 +1396,9 @@ public partial class CodeParser : Parser {
 
 	public partial class ScanFunctionContext : ParserRuleContext {
 		public ITerminalNode SCAN() { return GetToken(CodeParser.SCAN, 0); }
-		public ITerminalNode IDENTIFIERS() { return GetToken(CodeParser.IDENTIFIERS, 0); }
-		public ITerminalNode[] IDENTIFIER() { return GetTokens(CodeParser.IDENTIFIER); }
-		public ITerminalNode IDENTIFIER(int i) {
-			return GetToken(CodeParser.IDENTIFIER, i);
+		public ITerminalNode[] IDENTIFIERS() { return GetTokens(CodeParser.IDENTIFIERS); }
+		public ITerminalNode IDENTIFIERS(int i) {
+			return GetToken(CodeParser.IDENTIFIERS, i);
 		}
 		public ScanFunctionContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1439,7 +1437,7 @@ public partial class CodeParser : Parser {
 				{
 				{
 				State = 179; Match(T__1);
-				State = 180; Match(IDENTIFIER);
+				State = 180; Match(IDENTIFIERS);
 				}
 				}
 				State = 185;
@@ -1479,10 +1477,10 @@ public partial class CodeParser : Parser {
 	}
 
 	public static readonly string _serializedATN =
-		"\x3\xAF6F\x8320\x479D\xB75C\x4880\x1605\x191C\xAB37\x3\x30\xBD\x4\x2\t"+
-		"\x2\x4\x3\t\x3\x4\x4\t\x4\x4\x5\t\x5\x4\x6\t\x6\x4\a\t\a\x4\b\t\b\x4\t"+
-		"\t\t\x4\n\t\n\x4\v\t\v\x4\f\t\f\x4\r\t\r\x4\xE\t\xE\x4\xF\t\xF\x4\x10"+
-		"\t\x10\x4\x11\t\x11\x4\x12\t\x12\x4\x13\t\x13\x4\x14\t\x14\x4\x15\t\x15"+
+		"\x3\xAF6F\x8320\x479D\xB75C\x4880\x1605\x191C\xAB37\x3/\xBD\x4\x2\t\x2"+
+		"\x4\x3\t\x3\x4\x4\t\x4\x4\x5\t\x5\x4\x6\t\x6\x4\a\t\a\x4\b\t\b\x4\t\t"+
+		"\t\x4\n\t\n\x4\v\t\v\x4\f\t\f\x4\r\t\r\x4\xE\t\xE\x4\xF\t\xF\x4\x10\t"+
+		"\x10\x4\x11\t\x11\x4\x12\t\x12\x4\x13\t\x13\x4\x14\t\x14\x4\x15\t\x15"+
 		"\x3\x2\x3\x2\a\x2-\n\x2\f\x2\xE\x2\x30\v\x2\x3\x2\x3\x2\x3\x2\x3\x3\x3"+
 		"\x3\x3\x3\x3\x3\x5\x3\x39\n\x3\x3\x4\x3\x4\x5\x4=\n\x4\x3\x4\x3\x4\x3"+
 		"\x5\x3\x5\x3\x5\x3\x5\a\x5\x45\n\x5\f\x5\xE\x5H\v\x5\x3\x5\x3\x5\x5\x5"+
@@ -1542,11 +1540,11 @@ public partial class CodeParser : Parser {
 		"\xAD\x5\x18\r\x2\xAC\xAA\x3\x2\x2\x2\xAD\xB0\x3\x2\x2\x2\xAE\xAC\x3\x2"+
 		"\x2\x2\xAE\xAF\x3\x2\x2\x2\xAF\xB2\x3\x2\x2\x2\xB0\xAE\x3\x2\x2\x2\xB1"+
 		"\xA9\x3\x2\x2\x2\xB1\xB2\x3\x2\x2\x2\xB2\'\x3\x2\x2\x2\xB3\xB4\a+\x2\x2"+
-		"\xB4\xB9\a,\x2\x2\xB5\xB6\a\x4\x2\x2\xB6\xB8\a\x30\x2\x2\xB7\xB5\x3\x2"+
-		"\x2\x2\xB8\xBB\x3\x2\x2\x2\xB9\xB7\x3\x2\x2\x2\xB9\xBA\x3\x2\x2\x2\xBA"+
-		")\x3\x2\x2\x2\xBB\xB9\x3\x2\x2\x2\x10.\x38<\x46K[\x63m\x84\x96\x98\xAE"+
-		"\xB1\xB9";
+		"\xB4\xB9\a,\x2\x2\xB5\xB6\a\x4\x2\x2\xB6\xB8\a,\x2\x2\xB7\xB5\x3\x2\x2"+
+		"\x2\xB8\xBB\x3\x2\x2\x2\xB9\xB7\x3\x2\x2\x2\xB9\xBA\x3\x2\x2\x2\xBA)\x3"+
+		"\x2\x2\x2\xBB\xB9\x3\x2\x2\x2\x10.\x38<\x46K[\x63m\x84\x96\x98\xAE\xB1"+
+		"\xB9";
 	public static readonly ATN _ATN =
 		new ATNDeserializer().Deserialize(_serializedATN.ToCharArray());
 }
-} // namespace Group4_Interpreter
+} // namespace Group4_Interpreter.Interpret

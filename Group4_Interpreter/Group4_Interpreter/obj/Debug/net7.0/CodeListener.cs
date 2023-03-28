@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from D:\School\CS322\group4-interpreter\Group4_Interpreter\Group4_Interpreter\Code.g4 by ANTLR 4.6.6
+// Generated from D:\School\CS322\group4-interpreter\Group4_Interpreter\Group4_Interpreter\Interpret\Code.g4 by ANTLR 4.6.6
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -19,7 +19,7 @@
 // Ambiguous reference in cref attribute
 #pragma warning disable 419
 
-namespace Group4_Interpreter {
+namespace Group4_Interpreter.Interpret {
 using Antlr4.Runtime.Misc;
 using IParseTreeListener = Antlr4.Runtime.Tree.IParseTreeListener;
 using IToken = Antlr4.Runtime.IToken;
@@ -251,4 +251,4 @@ public interface ICodeListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitScanFunction([NotNull] CodeParser.ScanFunctionContext context);
 }
-} // namespace Group4_Interpreter
+} // namespace Group4_Interpreter.Interpret
