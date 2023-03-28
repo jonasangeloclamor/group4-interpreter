@@ -46,11 +46,15 @@ namespace Group4_Interpreter.Visit
             return base.VisitProgramStatements(context);
         }
 
-        public override object VisitVariableInitialization([NotNull] CodeParser.VariableInitializationContext context)
+        public override object? VisitVariableInitialization([NotNull] CodeParser.VariableInitializationContext context)
         {
-            string variableName = context.IDENTIFIERS()[0].GetText();
-            
-           
+            var dataType = context.programDataTypes().GetText();
+            var variableName = context.IDENTIFIERS().Select(id => id.GetText()).ToArray();
+            var variableValue = Visit(context.expression());
+            foreach(var name in variableName)
+            {
+                //something something
+            }
             return base.VisitVariableInitialization(context);
         }
 
@@ -60,6 +64,7 @@ namespace Group4_Interpreter.Visit
             var variableValue = Visit(context.expression());
 
             return Variables[variableName] = variableValue;
+            //kuwang ug error handling pa
         }
 
         public override object VisitBeginBlocks([NotNull] CodeParser.BeginBlocksContext context)
@@ -71,8 +76,16 @@ namespace Group4_Interpreter.Visit
         {
             return base.VisitIfCondition(context);
         }
-        
-        public override
-        
+
+        public override object? VisitDisplay([NotNull] CodeParser.DisplayContext context)
+        {
+            foreach (var variable in Variables)
+            {
+                Console.WriteLine("{0}", variable.Value);
+                break;
+            }
+            Console.WriteLine();
+            return null;
+        }
     }
 }
