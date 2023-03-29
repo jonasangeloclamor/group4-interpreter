@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj": {}
+    "D:\\group4-interpreter\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj": {}
   },
   "projects": {
-    "D:\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj": {
+    "D:\\group4-interpreter\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj",
+        "projectUniqueName": "D:\\group4-interpreter\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj",
         "projectName": "Group4_Interpreter",
-        "projectPath": "D:\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj",
+        "projectPath": "D:\\group4-interpreter\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj",
         "packagesPath": "C:\\Users\\Jonas Angelo Clamor\\.nuget\\packages\\",
-        "outputPath": "D:\\Group4_Interpreter\\Group4_Interpreter\\obj\\",
+        "outputPath": "D:\\group4-interpreter\\Group4_Interpreter\\Group4_Interpreter\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jonas Angelo Clamor\\AppData\\Roaming\\NuGet\\NuGet.Config",

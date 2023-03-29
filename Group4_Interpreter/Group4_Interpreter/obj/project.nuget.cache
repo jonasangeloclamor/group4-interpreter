@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kGljDaoqXNlRpEeJj9VYxjlwz65ukdmEqZ1Res/B2ws/1HHLXALspwOHqCua4+eZPvsSn4IPaDTIAoMGrLPnpA==",
+  "dgSpecHash": "x0/ncj3bUpi9C4t80n6SVajrjiqZ93xiSLKqdT+I8qC+iOtunzudUbzmSjJgNcsKZmClWDIYEsVId/70l0hdkQ==",
   "success": true,
-  "projectFilePath": "D:\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj",
+  "projectFilePath": "D:\\group4-interpreter\\Group4_Interpreter\\Group4_Interpreter\\Group4_Interpreter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jonas Angelo Clamor\\.nuget\\packages\\antlr4\\4.6.6\\antlr4.4.6.6.nupkg.sha512",
     "C:\\Users\\Jonas Angelo Clamor\\.nuget\\packages\\antlr4.codegenerator\\4.6.6\\antlr4.codegenerator.4.6.6.nupkg.sha512",

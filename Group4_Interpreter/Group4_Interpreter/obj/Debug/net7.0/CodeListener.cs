@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from D:\Group4_Interpreter\Group4_Interpreter\Code.g4 by ANTLR 4.6.6
+// Generated from D:\group4-interpreter\Group4_Interpreter\Group4_Interpreter\Code.g4 by ANTLR 4.6.6
 
 // Unreachable code detected
 #pragma warning disable 0162
