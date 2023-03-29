@@ -46,3 +46,4 @@ D:\School\CS322\group4-interpreter\Group4_Interpreter\Group4_Interpreter\obj\Deb
 D:\School\CS322\group4-interpreter\Group4_Interpreter\Group4_Interpreter\obj\Debug\net7.0\Group4_Interpreter.pdb
 D:\School\CS322\group4-interpreter\Group4_Interpreter\Group4_Interpreter\obj\Debug\net7.0\Group4_Interpreter.genruntimeconfig.cache
 D:\School\CS322\group4-interpreter\Group4_Interpreter\Group4_Interpreter\obj\Debug\net7.0\ref\Group4_Interpreter.dll
+D:\School\CS322\group4-interpreter\Group4_Interpreter\Group4_Interpreter\bin\Debug\net7.0\Interpret\test.code

@@ -1,18 +1,27 @@
 ﻿grammar Code;
 
-programStructure: BEGIN_CODE programLines* END_CODE  EOF ;
+programStructure: BEGIN_CODE NEWLINE programLines* NEWLINE END_CODE  EOF ;
 
-programLines: variableInitialization | programStatements | ifCondition | whileLoop;
+programLines
+    : variableInitialization 
+	| methodCall
+    | programStatements 
+    | ifCondition 
+    | whileLoop
+    | display
+    | scanFunction;
 
 programStatements: (assignmentOperator | methodCall) ';' ;
 
 variableInitialization: programDataTypes IDENTIFIERS (',' IDENTIFIERS)* ('=' expression)? ;
-assignmentOperator: IDENTIFIERS '=' expression ;
+assignmentOperator: programDataTypes IDENTIFIERS '=' expression ;
 
 beginBlocks: (BEGIN_CODE | BEGIN_IF | BEGIN_WHILE);
 
 BEGIN_CODE: 'BEGIN' 'CODE' ;
 END_CODE: 'END' 'CODE' ;
+
+NEWLINE: '\r'? '\n'| '\r';
 
 BEGIN_IF: 'BEGIN' 'IF' ;
 END_IF: 'END' 'IF' ;
@@ -61,7 +70,7 @@ LOGICAL_OPERATORS: 'AND' | 'OR' | 'NOT' ;
 
 // for DISPLAY: and SCAN:
 methodCall: IDENTIFIERS ':' (expression (',' expression)*)? ;
-display: 'DISPLAY' ':' expression ;
+display: 'DISPLAY' ':' expression* ;
 
 // Not working
 SCAN: 'SCAN:';

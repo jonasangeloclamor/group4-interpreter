@@ -2,6 +2,7 @@
 using Group4_Interpreter.Interpret;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Globalization;
 using System.Linq;
 using System.Text;
@@ -14,29 +15,24 @@ namespace Group4_Interpreter.Visit
         public Dictionary<string, object?> Variables { get; } = new();
         public override object? VisitProgramStructure([NotNull] CodeParser.ProgramStructureContext context)
         {
-            string beginDelimiter = "BEGIN CODE";
-            string endDelimiter = "END CODE";
-            string? beginCode = context.BEGIN_CODE()?.GetText();
-            string? endCode = context.END_CODE()?.GetText();
             string code = context.GetText().Trim();
-            
-            if (beginCode != beginDelimiter || endCode != endDelimiter)
+            if (code.StartsWith("BEGIN CODE") && code.EndsWith("END CODE"))
             {
-                throw new Exception("Invalid code delimiters");
-            }
-            
-            if (code.StartsWith(beginDelimiter) && code.EndsWith(endDelimiter))
-            {
-                Console.WriteLine("Code is valid");
+                // Visit each statement in the code
+                foreach (var statementContext in context.programLines())
+                {
+                    VisitProgramLines(statementContext);
+                }
             }
             else
             {
-                throw new Exception("Code must start with 'BEGIN CODE' and end with 'END CODE'");
+                Console.WriteLine("Code must start with 'BEGIN CODE' and end with 'END CODE'.");
             }
-            return base.VisitProgramStructure(context);
+
+            return null;
         }
 
-        public override object VisitProgramLines([NotNull] CodeParser.ProgramLinesContext context)
+        public override object? VisitProgramLines([NotNull] CodeParser.ProgramLinesContext context)
         {
             return base.VisitProgramLines(context);
         }
@@ -60,6 +56,7 @@ namespace Group4_Interpreter.Visit
 
         public override object? VisitAssignmentOperator([NotNull] CodeParser.AssignmentOperatorContext context)
         {
+            var dataType = context.programDataTypes().GetText();
             var variableName = context.IDENTIFIERS().GetText();
             var variableValue = Visit(context.expression());
 
